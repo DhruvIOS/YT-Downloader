@@ -10,34 +10,98 @@ Strong{
     color: red;
 }
 
+#format{
+    position: relative;
+    left: -345px;
+
+    height: 3rem;
+
+    background-color: #0485ff;
+    border: none;
+}
+
+
+
 .box{
     display: grid;
     place-items: center;
-    width:  80%;
-    height:  10rem;
+    place-content: center;
+    width:  70%;
+    height:  18rem;
     background-color: #f6f1f1d3;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    
+
+
+}
+.box2{
+    display: grid;
+    place-items: center;
+    place-content: center;
+    width:  362%;
+    height:  3rem;
+    background-color: #8a8888d3;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     
 
 
 }
 
-.container{
-    display: grid;
-    place-items: center;
 
+
+.container2{
+    display: grid;
+    place-items:center;
+
+
+    text-align: center;
 
     position: absolute;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
     top: 35%;
-    left: 5%;
+    left: 10%;
+}
+
+.container3{
+    display: grid;
+    place-items:center;
+
+
+    text-align: center;
+
+    position: absolute;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+    top: 84%;
+
 }
 
 .input{
 
 
-    width: 30%;
+    position: relative;
+
+    left: -161px;
+    width: 323%;
     height: 3rem;
 }
+
+.format{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1rem 1rem;
+
+}
+
 
 .convertBtn{
 
@@ -47,6 +111,23 @@ Strong{
     border:2px solid #0485ff;
     background: #0485ff;
     color:white;
+    height: 3rem;
+
+   
+
+
+
 }
+
+.convertBtn:hover{
+    background-color: #0f59d8;
+    border: 2px solid #0f59d8;
+}
+
+.space{
+    margin-left: 100px;
+}
+
+
 
 

@@ -1,10 +1,16 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const cors = require('cors');
+const ytdl = require('ytdl-core')
 
 
 app.get('/css/styles.css', (req, res) =>{
     res.sendFile(path.join(__dirname, 'public', 'css', 'styles.css'))
+  })
+
+app.get('/js/script.js', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'public', 'js', 'script.js'))
   })
 
 app.get('/', (req,res) => {
@@ -13,3 +19,15 @@ app.get('/', (req,res) => {
 const server = app.listen(3000, () => {
 console.log(`The application started on port ${server.address().port}`)
 })
+
+app.get('/download' ,(req, res) => {
+  var URL = req.query.URL;
+
+
+  res.header('Content-Disposition', 'attachment; filename="video.mp4"');
+
+  ytdl(URL, {
+    format: 'mp4'
+  }).pipe(res);
+})
+
