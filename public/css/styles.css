@@ -1,0 +1,52 @@
+
+
+.title{
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+Strong{
+    color: red;
+}
+
+.box{
+    display: grid;
+    place-items: center;
+    width:  80%;
+    height:  10rem;
+    background-color: #f6f1f1d3;
+
+    
+
+
+}
+
+.container{
+    display: grid;
+    place-items: center;
+
+
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+
+.input{
+
+
+    width: 30%;
+    height: 3rem;
+}
+
+.convertBtn{
+
+
+
+    border-radius:4px 4px 4px 4px;
+    border:2px solid #0485ff;
+    background: #0485ff;
+    color:white;
+}
+
+
