@@ -39,8 +39,8 @@
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <input id="inputBox" class="input" placeholder="Insert your link">
-                    
+                    <input id="inputBox" class="input" placeholder="Insert your link" required="true">
+                    <p id="alert" class="formatAlert">Please select format</p>
                 </div>
                 <div class="col space">
                     <button id="convertBtn"" class=" convertBtn">Download</button>
@@ -50,7 +50,27 @@
 
         </div>
 
-        
+        <div class="container3">
+
+            <div class="box2">
+
+                <div class="row">
+                    <div class="col">
+                        <select id="format" class="form-select" aria-label="Default select example" required="true" name="options">
+                            <option value="0" selected >Format</option>
+                            <option value="1"  >mp3</option>
+                            <option value="2">mp4</option>
+                            
+                          </select>
+
+                    </div>
+            
+                </div>
+
+
+            </div>
+
+        </div>
         <script src="/js/script.js"></script>
 
 
