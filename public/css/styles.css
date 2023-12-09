@@ -12,7 +12,7 @@ Strong{
 
 #format{
     position: relative;
-    left: -345px;
+    left: -402px;
 
     height: 3rem;
 
@@ -20,7 +20,20 @@ Strong{
     border: none;
 }
 
+.formatAlert{
+    display: none;
+    color: red;
 
+    
+
+}
+
+
+
+.formatAlert.active{
+    display: block;
+    color: red;
+}
 
 .box{
     display: grid;
