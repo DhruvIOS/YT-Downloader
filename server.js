@@ -3,7 +3,10 @@ const app = express()
 const path = require('path')
 const cors = require('cors');
 const ytdl = require('ytdl-core');
-const { title } = require('process');
+
+const ffmpeg = require('fluent-ffmpeg');
+const fs = require('fs');
+const exp = require('constants');
 
 
 app.get('/css/styles.css', (req, res) => {
@@ -26,26 +29,29 @@ app.get('/download', (req, res) => {
 
   var FORMAT = req.query.FORMAT
 
-
-
-
-
-  // var videoTitle = "";
-
-  // ytdl.getInfo(URL, function (err, info) {
-
-
-  //   videoTitle = info.title;
-  // });
-
- 
-
-
+  
 
   res.header('Content-Disposition',`attachment; filename=video.${FORMAT}`);
 
-  ytdl(URL, {
+  ytdl(URL,  {
     format: FORMAT
   }).pipe(res);
 })
 
+
+app.get('/mp3', (req,res) =>{
+
+  var URL = req.query.URL;;
+
+  var FORMAT = req.query.FORMAT;
+
+  
+  res.setHeader('Content-Type','audio/mpeg');
+  res.setHeader('Content-Disposition', `attachment; filename=audio.${FORMAT}`);
+
+  ytdl(URL, { filter: 'audioonly' })
+    .pipe(ffmpeg().format('mp3'))
+    .pipe(res);
+
+  
+})
